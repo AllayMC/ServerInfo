@@ -1,0 +1,6 @@
+{
+  "entrance": "org.allaymc.myplugin.MyPlugin",
+  "name": "MyPlugin",
+  "authors": ["mdx"],
+  "version": "1.0.0"
+}
