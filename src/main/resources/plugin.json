@@ -1,6 +1,6 @@
 {
-  "entrance": "org.allaymc.myplugin.MyPlugin",
-  "name": "MyPlugin",
-  "authors": ["mdx"],
+  "entrance": "org.allaymc.serverinfo.ServerInfo",
+  "name": "ServerInfo",
+  "authors": ["daoge_cnd"],
   "version": "1.0.0"
 }
