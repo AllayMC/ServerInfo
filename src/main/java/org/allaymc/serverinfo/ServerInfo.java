@@ -70,10 +70,9 @@ public final class ServerInfo extends Plugin {
         var loc = player.getLocation();
         var chunk = player.getCurrentChunk();
         var itemInHand = player.getItemInHand();
-        var blockUnder = player.getDimension().getBlockState(BlockFace.DOWN.offsetPos((int) loc.x(), (int) loc.y(), (int) loc.z()));
         lines.add(
                 "ItemInHand:\n§a" + itemInHand.getItemType().getIdentifier().path() + (itemInHand.getMeta() != 0 ? ":" + itemInHand.getMeta() : "") + "\n§f" +
-                "BlockUnder:\n§a" + blockUnder.getBlockType().getIdentifier().path()
+                "StandingOn:\n§a" + player.getBlockStateStandingOn().getBlockType().getIdentifier().path()
         );
         var chunkInfo =
                 "Chunk: §a" + chunk.getX() + "," + chunk.getZ() + "\n§f" +
