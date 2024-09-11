@@ -2,7 +2,6 @@ package org.allaymc.serverinfo;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import org.allaymc.api.block.data.BlockFace;
 import org.allaymc.api.entity.component.attribute.AttributeType;
 import org.allaymc.api.entity.interfaces.EntityPlayer;
 import org.allaymc.api.eventbus.EventHandler;
