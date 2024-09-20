@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly(group = "org.allaymc.allay", name = "Allay-API", version = "master-SNAPSHOT")
+    compileOnly(group = "org.allaymc.allay", name = "api", version = "master-SNAPSHOT")
     compileOnly(group = "org.projectlombok", name = "lombok", version = "1.18.34")
 
     annotationProcessor(group = "org.projectlombok", name = "lombok", version = "1.18.34")
