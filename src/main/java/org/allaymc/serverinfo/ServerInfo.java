@@ -17,7 +17,7 @@ import org.allaymc.api.registry.Registries;
 import org.allaymc.api.scoreboard.Scoreboard;
 import org.allaymc.api.scoreboard.data.DisplaySlot;
 import org.allaymc.api.server.Server;
-import org.allaymc.api.utils.MathUtils;
+import org.allaymc.api.math.MathUtils;
 import org.allaymc.api.world.World;
 import org.joml.Vector3f;
 
@@ -187,13 +187,26 @@ public final class ServerInfo extends Plugin {
         }
 
         if (SETTINGS.showPlayerInfo()) {
-            // Player info
             var playerInfo = "Ping: §a" + player.getPing() + "\n§f" +
                              "Food: §a" + player.getFoodLevel() + "/" + (int) AttributeType.PLAYER_HUNGER.getMaxValue() + "\n§f" +
                              "Exhaustion: §a" + MathUtils.round(player.getFoodExhaustionLevel(), 2) + "/" + (int) AttributeType.PLAYER_EXHAUSTION.getMaxValue() + "\n§f" +
                              "Saturation: §a" + MathUtils.round(player.getFoodSaturationLevel(), 2) + "/" + (int) AttributeType.PLAYER_SATURATION.getMaxValue() + "\n§f" +
                              "Exp: §a" + player.getExperienceInCurrentLevel() + "/" + player.getRequireExperienceForCurrentLevel();
             lines.add(playerInfo);
+        }
+
+        if (SETTINGS.showLightInfo()) {
+            var floorLoc = player.getLocation().floor(new Vector3f());
+            int x = (int) floorLoc.x;
+            int y = (int) floorLoc.y;
+            int z = (int) floorLoc.z;
+            var lightService = player.getDimension().getLightService();
+            var lightInfo = "Itl: §a" + lightService.getInternalLight(x, y, z) + "\n§f" +
+                            "Block: §a" + lightService.getBlockLight(x, y, z) + "\n§f" +
+                            "Sky: §a" + lightService.getSkyLight(x, y, z) + "\n§f" +
+                            "ItlSky: §a" + lightService.getInternalSkyLight(x, y, z) + "\n§f" +
+                            "Queue: §a" + lightService.getQueuedUpdateCount();
+            lines.add(lightInfo);
         }
 
         scoreboard.setLines(lines);

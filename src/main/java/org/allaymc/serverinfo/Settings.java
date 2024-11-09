@@ -21,6 +21,9 @@ public class Settings extends OkaeriConfig {
     @CustomKey("show-chunk-info")
     private boolean showChunkInfo = true;
 
+    @CustomKey("show-light-info")
+    private boolean showLightInfo = true;
+
     @CustomKey("show-misc-info")
     private boolean showMiscInfo = true;
 
