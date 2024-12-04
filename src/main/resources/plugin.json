@@ -1,6 +1,7 @@
 {
   "entrance": "org.allaymc.serverinfo.ServerInfo",
   "name": "ServerInfo",
-  "authors": ["daoge_cnd"],
-  "version": "1.0.0"
+  "description": "Show some information through scoreboard",
+  "authors": ["daoge_cmd"],
+  "version": "1.2.1"
 }

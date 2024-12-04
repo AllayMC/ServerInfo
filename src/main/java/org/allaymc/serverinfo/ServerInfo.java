@@ -154,8 +154,8 @@ public final class ServerInfo extends Plugin {
 
         if (SETTINGS.showWorldInfo()) {
             // World info
-            var worldInfo = "World: §a" + player.getWorld().getWorldData().getName() + "\n§f" +
-                            "Time: §a" + player.getWorld().getWorldData().getTime() + "\n§f" +
+            var worldInfo = "World: §a" + player.getWorld().getWorldData().getDisplayName() + "\n§f" +
+                            "Time: §a" + player.getWorld().getWorldData().getDisplayName() + "\n§f" +
                             "TPS: §a" + MathUtils.round(player.getWorld().getTPS(), 2) + "\n§f" +
                             "MSPT: §a" + MathUtils.round(player.getWorld().getMSPT(), 2);
             lines.add(worldInfo);
