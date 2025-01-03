@@ -166,7 +166,7 @@ public final class ServerInfo extends Plugin {
 
             lines.add(
                     "ItemInHand:\n§a" + itemInHand.getItemType().getIdentifier().path() + (itemInHand.getMeta() != 0 ? ":" + itemInHand.getMeta() : "") + "\n§f" +
-                    "StandingOn:\n§a" + player.getBlockStateStandingOn().getBlockType().getIdentifier().path()
+                    "StandingOn:\n§a" + player.getBlockStateStandingOn().blockState().getBlockType().getIdentifier().path()
             );
         }
 
