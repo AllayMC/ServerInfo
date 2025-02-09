@@ -5,7 +5,7 @@ plugins {
 
 group = "org.allaymc.serverinfo"
 description = "Show some information through scoreboard"
-version = "1.2.3"
+version = "1.2.4"
 
 java {
     toolchain {

@@ -19,7 +19,7 @@ import org.allaymc.api.scoreboard.data.DisplaySlot;
 import org.allaymc.api.server.Server;
 import org.allaymc.api.math.MathUtils;
 import org.allaymc.api.world.World;
-import org.joml.Vector3f;
+import org.joml.Vector3d;
 
 import java.util.*;
 
@@ -177,7 +177,7 @@ public final class ServerInfo extends Plugin {
                     "Loaded: §a" + player.getDimension().getChunkService().getLoadedChunks().size() + "\n§f" +
                     "Loading: §a" + player.getDimension().getChunkService().getLoadingChunks().size() + "\n§f";
             try {
-                var floorLoc = player.getLocation().floor(new Vector3f());
+                var floorLoc = player.getLocation().floor(new Vector3d());
                 chunkInfo += "Biome:\n§a" + player.getCurrentChunk().getBiome((int) floorLoc.x() & 15, (int) floorLoc.y(), (int) floorLoc.z() & 15).toString().toLowerCase();
             } catch (IllegalArgumentException e) {
                 // y coordinate is out of range
@@ -196,7 +196,7 @@ public final class ServerInfo extends Plugin {
         }
 
         if (SETTINGS.showLightInfo()) {
-            var floorLoc = player.getLocation().floor(new Vector3f());
+            var floorLoc = player.getLocation().floor(new Vector3d());
             int x = (int) floorLoc.x;
             int y = (int) floorLoc.y;
             int z = (int) floorLoc.z;
