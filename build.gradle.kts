@@ -5,7 +5,7 @@ plugins {
 
 group = "org.allaymc.serverinfo"
 description = "Show some information through scoreboard"
-version = "1.2.4"
+version = "1.3.0"
 
 java {
     toolchain {
@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly(group = "org.allaymc.allay", name = "api", version = "master-SNAPSHOT")
+    compileOnly(group = "org.allaymc.allay", name = "api", version = "0.6.0")
     compileOnly(group = "org.projectlombok", name = "lombok", version = "1.18.34")
 
     annotationProcessor(group = "org.projectlombok", name = "lombok", version = "1.18.34")
