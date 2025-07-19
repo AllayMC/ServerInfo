@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Better Scoreboard",
+        "name": "Better Scoreboard",
+        "uuid": "92b43bd2-e6de-4ded-bcb1-bbae0083ae4c",
+        "version": [
+            1,
+            1,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            16,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "Better Scoreboard",
+            "type": "resources",
+            "uuid": "89c0beac-1f9a-4697-abda-b6861741a6c3",
+            "version": [
+                1,
+                1,
+                0
+            ]
+        }
+    ]
+}
